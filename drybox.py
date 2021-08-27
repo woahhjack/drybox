@@ -17,14 +17,15 @@ while True:
     humidity, temperature = Adafruit_DHT.read(DHT_SENSOR, DHT_PIN)
     if humidity is not None and temperature is not None:
         print ("Temp={0:0.01f}C Humidity={1:0.1f}%".format(temperature, humidity))
-        if temperature > 25:
+        if humidity > 55:
             GPIO.output(17, GPIO.LOW)
             print('Relay 1 on')
-            time.sleep(2)
+            #sleep for 10 minutes
+            time.sleep(600)
         else:
             GPIO.output(17, GPIO.HIGH)
-            time.sleep(2)
+            #sleep for 5 minutes
+            time.sleep(300)
             print('Relay 1 OFF')
 
 GPIO.cleanup()
-
