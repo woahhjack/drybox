@@ -1,2 +1,2 @@
 # drybox
-DHT11 Humidity/Temp Sensor to regulate a fan connected to relay on RPi4
+DHT Humidity/Temp Sensor to regulate a fan connected to relay with raspberry pi 
